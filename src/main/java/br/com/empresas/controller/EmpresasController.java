@@ -2,17 +2,22 @@ package br.com.empresas.controller;
 
 import br.com.empresas.empresasConnections.EmpresaConnection;
 import br.com.empresas.model.Empresas;
+import br.com.empresas.model.Filters;
 import com.pain_crud.Alias;
 import com.pain_crud.PainCrud;
+import org.springframework.web.bind.annotation.RestController;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import java.util.logging.Filter;
 
 /**
  *
  * @author Geovane
  * Gerado automaticaente por AdonaiSoft - Utilitário
  */
+@RestController
 public class EmpresasController {
 
     EmpresaConnection connection = new EmpresaConnection();
@@ -57,6 +62,19 @@ public class EmpresasController {
 
         object =  pc.getOne(Empresas.class,con,sql);
 
+        return object;
+    }
+
+    public Object totais(Filters filter) throws SQLException {
+
+        Object object = new Object();
+        Connection con = null;
+        con = connection.getNewConnections("adonai_cnpj");
+
+        String sql = "select * from totais";
+
+        object =  pc.getOne(Object.class,con,sql);
+        con.close();
         return object;
     }
 }

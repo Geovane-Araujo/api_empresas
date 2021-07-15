@@ -39,3 +39,19 @@ CREATE TABLE public.municipios
     municipio character varying(80),
     PRIMARY KEY (id)
 );
+
+create table if not exists totais(
+
+     id serial primary key,
+     totalempresas bigint,
+     totalativas bigint,
+     totalinativas bigint
+);
+
+create table if not exists situacao(
+
+    id serial primary key,
+    codigo varchar(2),
+    descricao varchar(30)
+);
+

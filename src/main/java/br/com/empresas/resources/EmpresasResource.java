@@ -19,7 +19,7 @@ public class EmpresasResource {
     EmpresasController empresasController;
 
     @PostMapping("/empresas")
-    public ResponseEntity<?> get(@RequestBody Filters filter) throws SQLException {
+    public ResponseEntity<?> get(@RequestBody Filters filter) {
 
         Hashtable retorno = new Hashtable();
         try {

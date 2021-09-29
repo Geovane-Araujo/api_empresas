@@ -1,15 +1,18 @@
 package br.com.empresas.model;
 
-import com.pain_crud.Alias;
-import com.pain_crud.Ignore;
-
+import com.atom.Ignore;
+import com.atom.TableName;
 import java.io.Serializable;
+import java.util.Date;
 
-@Alias(value = "empresas")
+
+@TableName(value = "empresas")
 public class Empresas implements Serializable {
+
 
     @Ignore
     private static final long serialVersionUID = 1L;
+
     @Ignore
     private boolean add = true;
     @Ignore
@@ -17,53 +20,47 @@ public class Empresas implements Serializable {
     @Ignore
     private boolean del = false;
 
-    private int id;
-
-    private String cnpj;
-
-    private int tipo;
-
-    private String fantasia;
-
-    private String situacao;
-
-    private String datasituacao;
-
-    private String motivosituacao;
-
-    private String nomecidadeexterior;
-
-    private String pais;
-
-    private String inicioatividade;
-
-    private String cnaeprincipal;
-
-    private String tipologradouro;
+    private String email;
 
     private String logradouro;
 
+    private String cnpjdigito;
+
+    private String situacao;
+
+    private String fantasia;
+
+    private int tipo;
+
+    private String cnpjordem;
+
+    private String cnpjbasico;
+
     private String numero;
-
-    private String complemento;
-
-    private String bairro;
 
     private String cep;
 
-    private String uf;
-
     private int municipio;
 
-    private String telefoneprincipal;
+    private String tipologradouro;
+
+    private String uf;
+
+    private String bairro;
+
+    private int id;
+
+    private String cnaeprincipal;
 
     private String telefonesecundario;
 
-    private String email;
+    private Date datasituacao;
 
-    private String situacaoespecial;
+    private String telefoneprincipal;
 
-    private String datasituacaoespecial;
+    private String motivosituacao;
+
+    private Date inicioatividade;
 
     public boolean isAdd() {
         return add;
@@ -88,196 +85,6 @@ public class Empresas implements Serializable {
     public void setDel(boolean del) {
         this.del = del;
     }
-
-    public int getId() {
-        return id;
-    }
-
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getCnpj() {
-        return cnpj;
-    }
-
-
-    public void setCnpj(String cnpj) {
-        this.cnpj = cnpj;
-    }
-
-    public int getTipo() {
-        return tipo;
-    }
-
-
-    public void setTipo(int tipo) {
-        this.tipo = tipo;
-    }
-
-    public String getFantasia() {
-        return fantasia;
-    }
-
-
-    public void setFantasia(String fantasia) {
-        this.fantasia = fantasia;
-    }
-
-    public String getSituacao() {
-        return situacao;
-    }
-
-
-    public void setSituacao(String situacao) {
-        this.situacao = situacao;
-    }
-
-    public String getDatasituacao() {
-        return datasituacao;
-    }
-
-
-    public void setDatasituacao(String datasituacao) {
-        this.datasituacao = datasituacao;
-    }
-
-    public String getMotivosituacao() {
-        return motivosituacao;
-    }
-
-
-    public void setMotivosituacao(String motivosituacao) {
-        this.motivosituacao = motivosituacao;
-    }
-
-    public String getNomecidadeexterior() {
-        return nomecidadeexterior;
-    }
-
-
-    public void setNomecidadeexterior(String nomecidadeexterior) {
-        this.nomecidadeexterior = nomecidadeexterior;
-    }
-
-    public String getPais() {
-        return pais;
-    }
-
-
-    public void setPais(String pais) {
-        this.pais = pais;
-    }
-
-    public String getInicioatividade() {
-        return inicioatividade;
-    }
-
-
-    public void setInicioatividade(String inicioatividade) {
-        this.inicioatividade = inicioatividade;
-    }
-
-    public String getCnaeprincipal() {
-        return cnaeprincipal;
-    }
-
-
-    public void setCnaeprincipal(String cnaeprincipal) {
-        this.cnaeprincipal = cnaeprincipal;
-    }
-
-    public String getTipologradouro() {
-        return tipologradouro;
-    }
-
-
-    public void setTipologradouro(String tipologradouro) {
-        this.tipologradouro = tipologradouro;
-    }
-
-    public String getLogradouro() {
-        return logradouro;
-    }
-
-
-    public void setLogradouro(String logradouro) {
-        this.logradouro = logradouro;
-    }
-
-    public String getNumero() {
-        return numero;
-    }
-
-
-    public void setNumero(String numero) {
-        this.numero = numero;
-    }
-
-    public String getComplemento() {
-        return complemento;
-    }
-
-
-    public void setComplemento(String complemento) {
-        this.complemento = complemento;
-    }
-
-    public String getBairro() {
-        return bairro;
-    }
-
-
-    public void setBairro(String bairro) {
-        this.bairro = bairro;
-    }
-
-    public String getCep() {
-        return cep;
-    }
-
-
-    public void setCep(String cep) {
-        this.cep = cep;
-    }
-
-    public String getUf() {
-        return uf;
-    }
-
-
-    public void setUf(String uf) {
-        this.uf = uf;
-    }
-
-    public int getMunicipio() {
-        return municipio;
-    }
-
-
-    public void setMunicipio(int municipio) {
-        this.municipio = municipio;
-    }
-
-    public String getTelefoneprincipal() {
-        return telefoneprincipal;
-    }
-
-
-    public void setTelefoneprincipal(String telefoneprincipal) {
-        this.telefoneprincipal = telefoneprincipal;
-    }
-
-    public String getTelefonesecundario() {
-        return telefonesecundario;
-    }
-
-
-    public void setTelefonesecundario(String telefonesecundario) {
-        this.telefonesecundario = telefonesecundario;
-    }
-
     public String getEmail() {
         return email;
     }
@@ -286,22 +93,165 @@ public class Empresas implements Serializable {
     public void setEmail(String email) {
         this.email = email;
     }
-
-    public String getSituacaoespecial() {
-        return situacaoespecial;
+    public String getLogradouro() {
+        return logradouro;
     }
 
 
-    public void setSituacaoespecial(String situacaoespecial) {
-        this.situacaoespecial = situacaoespecial;
+    public void setLogradouro(String logradouro) {
+        this.logradouro = logradouro;
+    }
+    public String getCnpjdigito() {
+        return cnpjdigito;
     }
 
-    public String getDatasituacaoespecial() {
-        return datasituacaoespecial;
+
+    public void setCnpjdigito(String cnpjdigito) {
+        this.cnpjdigito = cnpjdigito;
+    }
+    public String getSituacao() {
+        return situacao;
     }
 
-    public void setDatasituacaoespecial(String datasituacaoespecial) {
-        this.datasituacaoespecial = datasituacaoespecial;
+
+    public void setSituacao(String situacao) {
+        this.situacao = situacao;
+    }
+    public String getFantasia() {
+        return fantasia;
+    }
+
+
+    public void setFantasia(String fantasia) {
+        this.fantasia = fantasia;
+    }
+    public int getTipo() {
+        return tipo;
+    }
+
+
+    public void setTipo(int tipo) {
+        this.tipo = tipo;
+    }
+    public String getCnpjordem() {
+        return cnpjordem;
+    }
+
+
+    public void setCnpjordem(String cnpjordem) {
+        this.cnpjordem = cnpjordem;
+    }
+    public String getCnpjbasico() {
+        return cnpjbasico;
+    }
+
+
+    public void setCnpjbasico(String cnpjbasico) {
+        this.cnpjbasico = cnpjbasico;
+    }
+    public String getNumero() {
+        return numero;
+    }
+
+
+    public void setNumero(String numero) {
+        this.numero = numero;
+    }
+    public String getCep() {
+        return cep;
+    }
+
+
+    public void setCep(String cep) {
+        this.cep = cep;
+    }
+    public int getMunicipio() {
+        return municipio;
+    }
+
+
+    public void setMunicipio(int municipio) {
+        this.municipio = municipio;
+    }
+    public String getTipologradouro() {
+        return tipologradouro;
+    }
+
+
+    public void setTipologradouro(String tipologradouro) {
+        this.tipologradouro = tipologradouro;
+    }
+    public String getUf() {
+        return uf;
+    }
+
+
+    public void setUf(String uf) {
+        this.uf = uf;
+    }
+    public String getBairro() {
+        return bairro;
+    }
+
+
+    public void setBairro(String bairro) {
+        this.bairro = bairro;
+    }
+    public int getId() {
+        return id;
+    }
+
+
+    public void setId(int id) {
+        this.id = id;
+    }
+    public String getCnaeprincipal() {
+        return cnaeprincipal;
+    }
+
+
+    public void setCnaeprincipal(String cnaeprincipal) {
+        this.cnaeprincipal = cnaeprincipal;
+    }
+    public String getTelefonesecundario() {
+        return telefonesecundario;
+    }
+
+
+    public void setTelefonesecundario(String telefonesecundario) {
+        this.telefonesecundario = telefonesecundario;
+    }
+    public Date getDatasituacao() {
+        return datasituacao;
+    }
+
+
+    public void setDatasituacao(Date datasituacao) {
+        this.datasituacao = datasituacao;
+    }
+    public String getTelefoneprincipal() {
+        return telefoneprincipal;
+    }
+
+
+    public void setTelefoneprincipal(String telefoneprincipal) {
+        this.telefoneprincipal = telefoneprincipal;
+    }
+    public String getMotivosituacao() {
+        return motivosituacao;
+    }
+
+
+    public void setMotivosituacao(String motivosituacao) {
+        this.motivosituacao = motivosituacao;
+    }
+    public Date getInicioatividade() {
+        return inicioatividade;
+    }
+
+
+    public void setInicioatividade(Date inicioatividade) {
+        this.inicioatividade = inicioatividade;
     }
 }
 

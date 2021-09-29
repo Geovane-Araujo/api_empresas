@@ -55,3 +55,11 @@ create table if not exists situacao(
     descricao varchar(30)
 );
 
+create table if not exists pessoa_usuario(
+
+    id serial primary key,
+    nome varchar(70),
+    login varchar(70),
+    senha varchar(20)
+);
+

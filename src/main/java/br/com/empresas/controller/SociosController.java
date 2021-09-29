@@ -1,6 +1,6 @@
 package br.com.empresas.controller;
 
-import br.com.empresas.model.Empresas;
+import br.com.empresas.model.Socios;
 import com.atom.Atom;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -14,14 +14,14 @@ import java.sql.SQLException;
  */
 
 @RestController
-public class EmpresasController {
+public class SociosController {
 
 
 
     String sql ="" ;
 
 
-    public Empresas save(Empresas obj, Connection con) throws SQLException, IllegalAccessException {
+    public Socios save(Socios obj, Connection con) throws SQLException, IllegalAccessException {
 
         int scalar = 0;
 
@@ -35,7 +35,7 @@ public class EmpresasController {
             Atom.editingOne(obj,con);
         }
         else if(obj.isDel()){
-            Atom.deleted(con, "empresas", "",obj.getId());
+            Atom.deleted(con, "socios", "",obj.getId());
         }
         con.commit();
         con.close();
@@ -45,9 +45,9 @@ public class EmpresasController {
 
         Object object = new Object();
 
-        String sql = "select * from empresas where id = " + id;
+        String sql = "select * from socios where id = " + id;
 
-        object =  Atom.getOne(Empresas.class,con,sql);
+        object =  Atom.getOne(Socios.class,con,sql);
 
         return object;
     }

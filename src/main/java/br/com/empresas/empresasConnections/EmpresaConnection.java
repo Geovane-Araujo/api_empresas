@@ -1,9 +1,12 @@
 package br.com.empresas.empresasConnections;
 
+import org.springframework.web.bind.annotation.RestController;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
+@RestController
 public class EmpresaConnection {
     private String url = "jdbc:postgresql://localhost:5432/";
 
